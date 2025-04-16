@@ -20,7 +20,7 @@ class _TambahTransaksiScreenState extends State<TambahTransaksiScreen> {
   void initState() {
     super.initState();
 
-    // Kalau data transaksi dikirim, isi form-nya
+    
     _jenisController = TextEditingController(
         text: widget.transaksi != null ? widget.transaksi!['jenis'] : '');
     _jumlahController = TextEditingController(
