@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:kos_pondokhasanah2/main.dart';
-import 'package:kos_pondokhasanah2/screens/home_screen.dart';  // Pastikan import ini
+import 'package:kos_pondokhasanah2/screens/home_screen.dart';  // Pastikan path-nya sesuai
 
 void main() {
-  testWidgets('Home Screen loads and shows Penghuni & Kamar options', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(MaterialApp(home: HomeScreen())); // Gunakan HomeScreen langsung
+  testWidgets('HomeScreen has title and functionality', (WidgetTester tester) async {
+    // Build HomeScreen widget
+    await tester.pumpWidget(MaterialApp(home: HomeScreen()));
 
-    // Verifikasi apakah teks 'Management Penghuni' muncul di layar
+    // Check if the title is found in the widget tree
+    expect(find.text('Aplikasi Kost Pondok Hasanah'), findsOneWidget);
+
+    // Check if the list items are available
     expect(find.text('Management Penghuni'), findsOneWidget);
     expect(find.text('Pengelolaan Kamar'), findsOneWidget);
-
-    // Pastikan icon yang ada di menu dapat ditemukan
-    expect(find.byIcon(Icons.person), findsOneWidget);
-    expect(find.byIcon(Icons.meeting_room), findsOneWidget);
+    expect(find.text('Kontrak Kost'), findsOneWidget);
+    expect(find.text('Transaksi'), findsOneWidget);
   });
 }

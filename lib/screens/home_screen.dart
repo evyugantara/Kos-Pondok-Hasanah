@@ -3,6 +3,9 @@ import 'penghuni/penghuni_list_screen.dart';
 import 'kamar/kamar_list_screen.dart';
 import 'kontrak/kontrak_list_screen.dart';  // Import Kontrak
 import 'transaksi/transaksi_list_screen.dart'; // Import Transaksi
+import 'laporan/laporan_list_screen.dart';
+
+ // Import Laporan Keuangan
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -61,6 +64,19 @@ class HomeScreen extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => TransaksiListScreen(),
+                ),
+              );
+            },
+          ),
+          // Laporan Keuangan
+          ListTile(
+            leading: Icon(Icons.assignment),
+            title: Text('Laporan Keuangan'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LaporanScreen(),
                 ),
               );
             },

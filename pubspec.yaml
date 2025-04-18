@@ -1,7 +1,7 @@
 name: kos_pondokhasanah2
 description: A new Flutter project.
 
-publish_to: 'none' # Remove this line if you want to publish to pub.dev
+publish_to: 'none'
 
 version: 1.0.0+1
 
@@ -11,8 +11,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  provider: ^6.0.3 # Menambahkan provider untuk state management (opsional)
-  intl: ^0.18.0 # Menambahkan intl untuk format tanggal
+  provider: ^6.0.4
+  pdf: ^3.6.0
+  intl: ^0.18.1
+
   flutter_test:
     sdk: flutter
 
@@ -21,3 +23,4 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  
